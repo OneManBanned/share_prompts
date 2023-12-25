@@ -22,7 +22,6 @@ const Nav = () => {
 
         setUpProviders()
     }, [])
-    console.log(providers, session)
 
     return (
         <nav className="flex-between w-full mb-16 pt-3">
@@ -70,7 +69,7 @@ const Nav = () => {
                                 <button
                                     type="button"
                                     key={provider.name}
-                                    onClick={() => signIn(provider.id)}
+                                    onClick={signIn(provider.id)}
                                     className='black_btn'
                                 >Sign In</button>
                             )
@@ -109,7 +108,7 @@ const Nav = () => {
                                 <button
                                     type="button"
                                     onClick={() => {
-                                        setToggleDropdown(fasle)
+                                        setToggleDropdown(false)
                                         signOut();
                                     }}
                                     className='mt-5 w-full black_btn'
@@ -125,7 +124,7 @@ const Nav = () => {
                             <button
                                 type="button"
                                 key={provider.name}
-                                onClick={() => signIn(provider.id)}
+                                onClick={signIn(provider.id)}
                                 className='black_btn'
                             >Sign In</button>
                         )
