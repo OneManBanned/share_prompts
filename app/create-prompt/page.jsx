@@ -31,7 +31,6 @@ const CreatePrompt = () => {
                 })
             })
 
-            console.log('hit', response)
 
             if (response.ok) {
                 router.push('/')
